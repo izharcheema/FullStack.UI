@@ -6,6 +6,7 @@ import { EditCompanyComponent } from './components/companies/edit-company/edit-c
 import { AddEmployeeComponent } from './components/employees/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './components/employees/edit-employee/edit-employee.component';
 import { EmployeesListComponent } from './components/employees/employees-list/employees-list.component';
+import { InternalUserComponent } from './components/internal-user/internal-user/internal-user.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
   path:"companies/edit/:id",
   component:EditCompanyComponent
+  },
+  {
+    path:"inernal-user/add",
+    component:InternalUserComponent
   }
 ];
 

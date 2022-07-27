@@ -11,6 +11,7 @@ import { EditEmployeeComponent } from './components/employees/edit-employee/edit
 import { CompaniesListComponent } from './components/companies/companies-list/companies-list.component';
 import { AddCompanyComponent } from './components/companies/add-company/add-company.component';
 import { EditCompanyComponent } from './components/companies/edit-company/edit-company.component';
+import { InternalUserComponent } from './components/internal-user/internal-user/internal-user.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditCompanyComponent } from './components/companies/edit-company/edit-c
     EditEmployeeComponent,
     CompaniesListComponent,
     AddCompanyComponent,
-    EditCompanyComponent
+    EditCompanyComponent,
+    InternalUserComponent
   ],
   imports: [
     BrowserModule,
