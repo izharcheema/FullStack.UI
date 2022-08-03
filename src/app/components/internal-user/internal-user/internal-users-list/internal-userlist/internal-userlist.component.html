@@ -1,0 +1,45 @@
+<div class="container my-5">
+    <h1 class="mb-3">Internal Users</h1>
+    <table class="table table-striped table-bordered"*ngIf="internaluser && internaluser.length >0 ">
+        <caption>List of Internal Users</caption>
+        <thead>
+            <tr class="p-3 mb-2 bg-dark text-white">
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Designation</th>
+                <th>Grade</th>
+                <th>Employee Id</th>
+                <th>Gender</th>
+                <th>User Roles/Group Roles</th>
+                <th>User Group</th>
+                <th>Date Of Birth</th>
+                <th>CNIC</th>
+                <th>Mobile</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let internaluser of internaluser">
+                <td>{{internaluser.id}}</td>
+                <td>{{internaluser.firstName}}</td>
+                <td>{{internaluser.lastName}}</td>
+                <td>{{internaluser.userName}}</td>
+                <td>{{internaluser.email}}</td>
+                <td>{{internaluser.designation}}</td>
+                <td>{{internaluser.grade}}</td>
+                <td>{{internaluser.employeeId}}</td>
+                <td>{{internaluser.gender}}</td>
+                <td>{{internaluser.userRole_GroupRole}}</td>
+                <td>{{internaluser.userGroup}}</td>
+                <td>{{internaluser.dob}}</td>
+                <td>{{internaluser.cnic}}</td>
+                <td>{{internaluser.mobile}}</td>
+                <td><a [routerLink]="['/internaluser','edit',internaluser.id]">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!internaluser || internaluser.length <=0">No internal Users Found!</p>
+    </div>

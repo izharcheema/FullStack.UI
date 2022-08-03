@@ -1,14 +1,14 @@
 export interface Internal_User{
-id:string;
+id:number;
 firstName:string;
 lastName:string;
 userName:string;
 email:string;
 designation:string;
 grade:number;
-employeeId:string;
+employeeId:number;
 gender:string;
-uRUG:number;
+userRole_GroupRole:number;
 userGroup:number;
 dob:string;
 cnic:string;
