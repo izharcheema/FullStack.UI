@@ -30,6 +30,7 @@ export class EditInternalUserComponent implements OnInit{
   userRole_GroupRole:any=[1,2,3,4,5]
   userGroup:any=[1,2,3,4,5]
   internalUser:FormGroup=new FormGroup({
+    id:new FormControl(''),
     firstName:new FormControl(''),
     lastName:new FormControl(''),
     userName:new FormControl(''),
@@ -62,6 +63,7 @@ export class EditInternalUserComponent implements OnInit{
     })
     //validations
     this.internalUser=this.fb.group({
+      id:[''],
       firstName:['',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]],
       lastName:['',Validators.required],
       username:['',Validators.required],

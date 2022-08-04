@@ -52,7 +52,7 @@ const routes: Routes = [
     component:InternalUserlistComponent
   },
   {
-    path:"internaluser/edit:id",
+    path:"internaluser/edit/:id",
     component:EditInternalUserComponent
   },
   {

@@ -22,22 +22,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let internaluser of internaluser">
-                <td>{{internaluser.id}}</td>
-                <td>{{internaluser.firstName}}</td>
-                <td>{{internaluser.lastName}}</td>
-                <td>{{internaluser.userName}}</td>
-                <td>{{internaluser.email}}</td>
-                <td>{{internaluser.designation}}</td>
-                <td>{{internaluser.grade}}</td>
-                <td>{{internaluser.employeeId}}</td>
-                <td>{{internaluser.gender}}</td>
-                <td>{{internaluser.userRole_GroupRole}}</td>
-                <td>{{internaluser.userGroup}}</td>
-                <td>{{internaluser.dateOFBirth}}</td>
-                <td>{{internaluser.cnic}}</td>
-                <td>{{internaluser.mobile}}</td>
-                <td><a [routerLink]="['/internaluser','edit',internaluser.id]">Edit</a></td>
+            <tr *ngFor="let internalusers of internaluser">
+                <td>{{internalusers.id}}</td>
+                <td>{{internalusers.firstName}}</td>
+                <td>{{internalusers.lastName}}</td>
+                <td>{{internalusers.userName}}</td>
+                <td>{{internalusers.email}}</td>
+                <td>{{internalusers.designation}}</td>
+                <td>{{internalusers.grade}}</td>
+                <td>{{internalusers.employeeId}}</td>
+                <td>{{internalusers.gender}}</td>
+                <td>{{internalusers.userRole_GroupRole}}</td>
+                <td>{{internalusers.userGroup}}</td>
+                <td>{{internalusers.dateOFBirth}}</td>
+                <td>{{internalusers.cnic}}</td>
+                <td>{{internalusers.mobile}}</td>
+                <td><a [routerLink]="['/internaluser','edit',internalusers.id]">Edit</a></td>
             </tr>
         </tbody>
     </table>

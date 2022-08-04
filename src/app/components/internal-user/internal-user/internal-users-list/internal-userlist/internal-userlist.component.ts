@@ -14,7 +14,6 @@ internaluser:Internal_User[]=[];
   ngOnInit(): void {
       this.internalusersevice.GetAllInternalUsers().subscribe({
       next:(internaluser)=>{
-        debugger
         this.internaluser=internaluser;
         console.log(this.internaluser);
       },

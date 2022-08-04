@@ -5,7 +5,9 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="updateInternalUserRequest.id">
+                    <input type="text" class="form-control" id="id"  name="id" readonly
+                    formControlName="id"
+                    [(ngModel)]="updateInternalUserRequest.id">
                 </div>
                 <div class="mb-3">
                   <label for="firstName" class="form-label" style="color: red;">*</label>
