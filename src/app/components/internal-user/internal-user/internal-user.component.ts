@@ -99,7 +99,7 @@ export class InternalUserComponent implements OnInit{
     this.inertnaluserservice.addinternaluser(this.addInternalUserRequest)
     .subscribe({
       next:(internalUser)=>{
-        this.router.navigate(['internaluser/add']);
+        this.router.navigate(['internaluser']);
       },
       error:(respnse)=>{
         console.log(respnse);
