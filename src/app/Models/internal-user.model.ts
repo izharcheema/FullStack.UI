@@ -10,7 +10,7 @@ employeeId:number;
 gender:string;
 userRole_GroupRole:number;
 userGroup:number;
-dob:string;
+dateOFBirth:string;
 cnic:string;
 mobile:string;
 }

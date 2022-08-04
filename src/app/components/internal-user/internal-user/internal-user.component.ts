@@ -22,7 +22,7 @@ export class InternalUserComponent implements OnInit{
     gender:'',
     userRole_GroupRole:0,
     userGroup:0,
-    dob:'',
+    dateOFBirth:'',
     cnic:'',
     mobile:'',
   }
