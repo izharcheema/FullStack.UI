@@ -1,0 +1,201 @@
+<div class="container my-5">
+    <h1 class="mb-3">Internal User</h1>
+    <form [formGroup]="internalUser" (ngSubmit)="updateInternalUser()">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="updateInternalUserRequest.id">
+                </div>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label" style="color: red;">*</label>
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input
+                    type="text"
+                    formControlName="firstName"
+                    class="form-control"
+                    placeholder="Enter First Name"
+                    [(ngModel)]="updateInternalUserRequest.firstName"
+                    [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }"/>
+                  <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                    <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
+                    <div *ngIf="f['firstName'].errors['minlength']"> Minimum 3 Words Required</div>
+                    <div *ngIf="f['firstName'].errors['maxlength']">Maximum 20 Words Are Allowed</div>
+                  </div>
+               
+                        
+                </div>
+                <div class="mb-3">
+                  <label for="username" class="form-label" style="color: red;">*</label>
+                    <label for="username" class="form-label">Username</label>
+                    <input
+                    type="text"
+                    formControlName="username"
+                    class="form-control"
+                    placeholder="Enter UserName"
+                    [(ngModel)]="updateInternalUserRequest.userName"
+                    [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"/>
+                  <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                    <div *ngIf="f['username'].errors['required']">Username is required</div>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <label for="designation" class="form-label" style="color: red;">*</label>
+                    <label for="designation" class="form-label">Designation</label>
+                    <input
+                    type="text"
+                    formControlName="designation"
+                    class="form-control"
+                    placeholder="Enter Your Designation"
+                    [(ngModel)]="updateInternalUserRequest.designation"
+                    [ngClass]="{ 'is-invalid': submitted && f['designation'].errors }"/>
+                  <div *ngIf="submitted && f['designation'].errors" class="invalid-feedback">
+                    <div *ngIf="f['designation'].errors['required']">Designation is required</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="employeeId" class="form-label">Employee Id</label>
+                    <input type="text" class="form-control" id="employeeId" name="employeeId"
+                    formControlName="employeeId"
+                        placeholder="Enter Your Employee Id"
+                        [(ngModel)]="updateInternalUserRequest.employeeId">
+                </div>
+                <div class="mb-3">
+                  <label for="userRole_GroupRole" class="form-label" style="color: red;">*</label>
+                    <label class="mb-2" for="userRole_GroupRole">User Role/Group Role</label>
+                    <select class="form-select" formControlName="userRole_GroupRole"
+                    [(ngModel)]="updateInternalUserRequest.userRole_GroupRole"
+                    [ngClass]="{'is-invalid': submitted && f['userRole_GroupRole'].errors}">
+                        <option value="">Select Roles</option>
+                        <option *ngFor="let urgr of userRole_GroupRole" [ngValue]="urgr">{{urgr}}</option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="submitted && userRole_GroupRole?.invalid">
+                      User Roles/Group Roles Are Required
+                    </div>
+                </div>
+                <div class="mb-3">
+                  <label for="dateOfBirth" class="form-label" style="color: red;">*</label>
+                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                    <input
+                    type="date"
+                    formControlName="dob"
+                    class="form-control"
+                    [(ngModel)]="updateInternalUserRequest.dateOFBirth"
+                    [ngClass]="{ 'is-invalid': submitted && f['dob'].errors }"/>
+                  <div *ngIf="submitted && f['dob'].errors" class="invalid-feedback">
+                    <div *ngIf="f['dob'].errors['required']">DateOfBirth is required</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="mobile" class="form-label" style="color: red;">*</label>
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <div class="input-group mb-3">
+                        <input
+                          type="text"
+                          formControlName="mobile"
+                          class="form-control"
+                          [(ngModel)]="updateInternalUserRequest.mobile"
+                          placeholder="Please Enter Your Mobile Number"
+                          [ngClass]="{ 'is-invalid': submitted && f['mobile'].errors }"/>
+                        <div *ngIf="submitted && f['mobile'].errors" class="invalid-feedback">
+                          <div *ngIf="f['mobile'].errors['required']">Mobile Number is required</div>
+                        </div>
+                          </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                  <label for="lastName" class="form-label" style="color: red;">*</label>
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input
+                    type="text"
+                    formControlName="lastName"
+                    class="form-control"
+                    placeholder="Enter Last Name"
+                    [(ngModel)]="updateInternalUserRequest.lastName"
+                    [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }"/>
+                  <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                    <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label" style="color: red;">*</label>
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                    type="text"
+                    formControlName="email"
+                    class="form-control"
+                    [(ngModel)]="updateInternalUserRequest.email"
+                    placeholder="Enter Your Email"
+                    [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+                  <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                    <div *ngIf="f['email'].errors['email']">Invalid Email</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="grade" class="form-label" style="color: red;">*</label>
+                    <label class="mb-2" for="grade">Grade</label>
+                    <select class="form-select" formControlName="grade"
+                    [(ngModel)]="updateInternalUserRequest.grade"
+                    [ngClass]="{'is-invalid': submitted && f['grade'].errors}">
+                        <option value="">Select Grade</option>
+                        <option *ngFor="let grade of Grade" [ngValue]="grade">{{grade}}</option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="submitted && grade?.invalid">
+                      Grade Is Required
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group mb-3">
+                      <label for="gender" class="form-label" style="color: red;">*</label>
+                        <label class="mb-3" for="gender" class="form-label mt-2">Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="gender"
+                            formControlName="gender" [(ngModel)]="updateInternalUserRequest.gender"
+                                value="Male" checked>
+                            <label class="form-check-label" for="gender">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="gender"
+                            formControlName="gender" [(ngModel)]="updateInternalUserRequest.gender"
+                                value="Female">
+                            <label class="form-check-label" for="gender">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="gender"
+                            formControlName="gender" [(ngModel)]="updateInternalUserRequest.gender"
+                                value="Transgender">
+                            <label class="form-check-label" for="gender">Transgender</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2 ">
+                    <label class="mb-2" for="grade">User Group</label>
+                    <select class="form-select " id="grade" formControlName="userGroup" [(ngModel)]="updateInternalUserRequest.userGroup">
+                        <option>Select Groups</option>
+                        <option *ngFor="let usergroup of userGroup">{{usergroup}}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                  <label for="cnic" class="form-label" style="color: red;">*</label>
+                    <label for="cnic" class="form-label">CNIC</label>
+                    <input
+                    type="text"
+                    formControlName="cnic"
+                    class="form-control"
+                    [(ngModel)]="updateInternalUserRequest.cnic"
+                    placeholder="XXXXX-XXXXXXX-X"
+                    [ngClass]="{ 'is-invalid': submitted && f['cnic'].errors }"/>
+                  <div *ngIf="submitted && f['cnic'].errors" class="invalid-feedback">
+                    <div *ngIf="f['cnic'].errors['required']">CNIC is required</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-outline-danger" (click)="deleteInternalUser(updateInternalUserRequest.id)">Delete</button>
+        <button type="submit" class="btn btn-success">Update</button>
+    </div>
+</div>
