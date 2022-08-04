@@ -12,6 +12,7 @@ import { AddCompanyComponent } from './components/companies/add-company/add-comp
 import { EditCompanyComponent } from './components/companies/edit-company/edit-company.component';
 import { InternalUserComponent } from './components/internal-user/internal-user/internal-user.component';
 import { InternalUserlistComponent } from './components/internal-user/internal-user/internal-users-list/internal-userlist/internal-userlist.component';
+import { EditInternalUserComponent } from './components/internal-user/internal-user/edit-internaluser/edit-internaluser.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InternalUserlistComponent } from './components/internal-user/internal-u
     EditCompanyComponent,
     InternalUserComponent,
     InternalUserlistComponent,
-    InternalUserlistComponent
+    InternalUserlistComponent,
+    EditInternalUserComponent
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,13 @@ export class InternalUserService {
     addInternalUserRequest.id=0;
     return this.http.post<Internal_User>(this.baseApiUrl+'/api/InternalUser',addInternalUserRequest);
   }
-  
+  getInternalUser(id:any):Observable<Internal_User>{
+    return this.http.get<Internal_User>(this.baseApiUrl+'/api/InternalUser/'+id);
+  }
+  updateInternalUser(id:number,updateInternalUserRequest:Internal_User):Observable<Internal_User>{
+  return this.http.put<Internal_User>(this.baseApiUrl+'/api/InternalUser/'+id,updateInternalUserRequest);
+  }
+  deleteInternalUser(id:Number):Observable<Internal_User>{
+    return this.http.delete<Internal_User>(this.baseApiUrl+'/api/Internaluser/'+id);
+  }
 }
