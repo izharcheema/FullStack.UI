@@ -8,16 +8,16 @@ import { InternalUserService } from 'src/app/services/internal-user.service';
   styleUrls: ['./internal-userlist.component.css']
 })
 export class InternalUserlistComponent implements OnInit {
-internaluser:Internal_User[]=[];
-  constructor(private internalusersevice:InternalUserService) { }
+  internaluser: Internal_User[] = [];
+  constructor(private internalusersevice: InternalUserService) { }
 
   ngOnInit(): void {
-      this.internalusersevice.GetAllInternalUsers().subscribe({
-      next:(internaluser)=>{
-        this.internaluser=internaluser;
+    this.internalusersevice.GetAllInternalUsers().subscribe({
+      next: (internaluser) => {
+        this.internaluser = internaluser;
         console.log(this.internaluser);
       },
-      error:(response)=>{
+      error: (response) => {
         console.log(response);
       }
     });

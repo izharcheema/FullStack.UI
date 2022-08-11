@@ -9,6 +9,9 @@ import { EmployeesListComponent } from './components/employees/employees-list/em
 import { EditInternalUserComponent } from './components/internal-user/internal-user/edit-internaluser/edit-internaluser.component';
 import { InternalUserComponent } from './components/internal-user/internal-user/internal-user.component';
 import { InternalUserlistComponent } from './components/internal-user/internal-user/internal-users-list/internal-userlist/internal-userlist.component';
+import { AddlocationComponent } from './components/location/addlocation/addlocation.component';
+import { EditlocationComponent } from './components/location/editlocation/editlocation.component';
+import { LocationListComponent } from './components/location/location-list/location-list.component';
 
 const routes: Routes = [
   {
@@ -58,6 +61,22 @@ const routes: Routes = [
   {
     path:"",
     component:InternalUserlistComponent
+  },
+  {
+    path:"",
+    component:LocationListComponent
+  },
+  {
+    path:"location",
+    component:LocationListComponent
+  },
+  {
+    path:"location/add",
+    component:AddlocationComponent
+  },
+  {
+    path:"location/edit/:id",
+    component:EditlocationComponent
   }
 ];
 

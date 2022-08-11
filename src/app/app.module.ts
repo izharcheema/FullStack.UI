@@ -13,6 +13,8 @@ import { EditCompanyComponent } from './components/companies/edit-company/edit-c
 import { InternalUserComponent } from './components/internal-user/internal-user/internal-user.component';
 import { InternalUserlistComponent } from './components/internal-user/internal-user/internal-users-list/internal-userlist/internal-userlist.component';
 import { EditInternalUserComponent } from './components/internal-user/internal-user/edit-internaluser/edit-internaluser.component';
+import { LocationListComponent } from './components/location/location-list/location-list.component';
+import { AddlocationComponent } from './components/location/addlocation/addlocation.component';
 
 
 @NgModule({
@@ -27,7 +29,10 @@ import { EditInternalUserComponent } from './components/internal-user/internal-u
     InternalUserComponent,
     InternalUserlistComponent,
     InternalUserlistComponent,
-    EditInternalUserComponent
+    EditInternalUserComponent,
+    LocationListComponent,
+    AddlocationComponent,
+    LocationListComponent
   ],
   imports: [
     BrowserModule,
